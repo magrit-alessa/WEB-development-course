@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <form id ="form">
+       <input type="text" name="name" class ="user_data" placeholder="Имя">
+       <input type="text" name="lastName" class ="user_data" placeholder="Фамилия">
+       <input type="text" name="email" class ="user_data" placeholder="email">
+       <br>
+
+       <p>Выберите тип билета:</p>
+        
+          <input type="radio" name="ticket" value="Free" checked>Free<br>
+          <input type="radio" name="ticket" value="Standart">Standart<br>
+          <input type="radio" name="ticket" value="Premium">Premium<br><br/>
+
+         <a href="#" style = "text-decoration: none; color: black; " onclick="document.getElementById('captcha').src=document.getElementById( 'captcha').src='captcha.php?r'+ Math.random();">обновить код</a><br/><br/><br/>
+          <img alt="" id="captcha" src="captcha.php" /><br/><br/>
+          
+         <input type="text"  maxlength="<?=$captcha_length;?>" style="text-align: center;" autocomplete="off" name="captcha" value="" placeholder = "Enter the numbers"/> 
+        <br/><br/>
+        
+       <button type="submit">Отправить</button> 
+       
+       
+       
+        
+
+       <p class="messages"></p>
+
+
+  </form>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+  <script src="main.js"></script>
+
+
+
+
+</body>
+</html>
